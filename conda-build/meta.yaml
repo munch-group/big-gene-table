@@ -12,7 +12,7 @@ build:
   script: $PYTHON -m pip install . -vv
   python_version_independent: true
   entry_points:
-    - munch-group-template = munch_group_template:munch_group_template
+    - munch-group-template = big_gene_table:big_gene_table
 
 requirements:
   host:
@@ -37,7 +37,7 @@ dependencies:   # keep this block with only these packages
 
 test:
   imports:
-    - munch_group_template
+    - big_gene_table
 
 about:
   home: https://github.com/munch-group/munch-group-template.git

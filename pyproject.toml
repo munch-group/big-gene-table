@@ -32,7 +32,7 @@ Repository = "https://github.com/munch-group/munch-group-template"
 Documentation = "https://munch-group.org/munch-group-template"
 
 [project.scripts]
-munch-group-template = "munch_group_template:munch_group_template"
+munch-group-template = "big_gene_table:big_gene_table"
 
 [tool.setuptools]
 include-package-data = true
@@ -42,16 +42,7 @@ where = ["src"]
 exclude = ["test*"]
 
 [tool.setuptools.package-data]
-munch_group_template = ["data/*.txt", "data/*.csv", "data/*.pickle", "data/*.h5"]
-
-
-[tool.pixi.project]
-name = "munch-group-template"
-version = "0.1.1.rc1"
-description = "Project description"
-authors = ["Your Name <your@email.com>"]
-channels = ["conda-forge"]
-platforms = ["linux-64", "osx-64", "osx-arm64", "win-64"]
+big_gene_table = ["data/*.txt", "data/*.csv", "data/*.pickle", "data/*.h5"]
 
 [tool.pixi.workspace]
 channels = ["conda-forge", "munch-group"]

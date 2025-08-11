@@ -74,7 +74,7 @@ format:
 quartodoc:
   style: pkgdown
   dir: api
-  package: munch_group_template
+  package: big_gene_table
   render_interlinks: true
   options:
     signature_name: full
@@ -86,13 +86,13 @@ quartodoc:
 
   sections:
     - title: Some section
-      package: munch_group_template.modulename
+      package: big_gene_table.modulename
       desc: |
         Some description...
       contents:
         - functionname
     - title: Some other section
-      package: munch_group_template.modulename
+      package: big_gene_table.modulename
       desc: |
         Some description...
       contents:

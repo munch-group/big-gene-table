@@ -6,7 +6,7 @@ This script:
 1. Gets the repository name from git
 2. Converts dashes to underscores to create a valid Python module name
 3. Replaces all instances of "munch-group-template" with the module name
-4. Renames the src/munch_group_template directory to src/{modulename}
+4. Renames the src/big_gene_table directory to src/{modulename}
 
 Usage:
     python template_init.py [--dry-run]
@@ -84,7 +84,7 @@ def get_files_to_process():
     exclude_dirs = {
         '.git', '.pixi', '__pycache__', '.pytest_cache', 
         'node_modules', '.venv', 'venv', 'env',
-        'munch_group_template.egg-info'
+        'big_gene_table.egg-info'
     }
     exclude_extensions = {
         '.pyc', '.pyo', '.so', '.dylib', '.dll', '.exe',
@@ -147,8 +147,8 @@ def main():
     print(f"Repository name: {repo_name}")
     print(f"Module name: {module_name}")
     
-    if module_name == "munch_group_template":
-        print("Module name is already 'munch_group_template', no changes needed.")
+    if module_name == "big_gene_table":
+        print("Module name is already 'big_gene_table', no changes needed.")
         return
     
     # Get all files to process
@@ -160,7 +160,7 @@ def main():
     # Replace text in files
     files_changed = 0
     for file_path in files_to_process:
-        if find_and_replace_in_file(file_path, "munch_group_template", module_name, args.dry_run):
+        if find_and_replace_in_file(file_path, "big_gene_table", module_name, args.dry_run):
             files_changed += 1
             status = "Would update" if args.dry_run else "✓"
             print(f"  {status} {file_path}")
@@ -169,7 +169,7 @@ def main():
     print(f"\n📁 {result} {files_changed} files")
     
     # Rename the source directory
-    if rename_directory("munch_group_template", module_name, args.dry_run):
+    if rename_directory("big_gene_table", module_name, args.dry_run):
         status = "Would rename" if args.dry_run else "✓ Renamed"
         print(f"{status} source directory")
     
