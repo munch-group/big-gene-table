@@ -3,8 +3,8 @@ requires = ["setuptools>=61.0", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "munch-group-template"
-version = "0.1.1.rc1"
+name = "big-gene-table"
+version = "0.0.1"
 description = "Project description"
 authors = [
     {name = "Your Name", email = "your@email.com"}
@@ -17,22 +17,18 @@ classifiers = [
     "Programming Language :: Python :: 3",
 ]
 dependencies = [
-    "cryptography",
-    "jupyterlab>=4",
-    "nbdime", 
-    "seaborn",
-    "scipy",
-    "scikit-learn",
-    "statsmodels",
+    "pandas",
+    "numpy",
+    "requests",
 ]
+
+[project.scripts]
+big-gene-table = "big_gene_table:big_gene_table"
 
 [project.urls]
 Homepage = "https://github.com/munch-group/munch-group-template"
 Repository = "https://github.com/munch-group/munch-group-template"
 Documentation = "https://munch-group.org/munch-group-template"
-
-[project.scripts]
-munch-group-template = "big_gene_table:big_gene_table"
 
 [tool.setuptools]
 include-package-data = true
