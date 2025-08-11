@@ -279,9 +279,9 @@ def generate_complete_table_with_simulated_gtex():
     result_df['last_updated'] = datetime.now()
     result_df['version'] = '1.0'
     
-    # Save results
-    output_file = 'comprehensive_gene_table_with_gtex_expression.csv'
-    result_df.to_csv(output_file, index=False)
+    # # Save results
+    # output_file = 'comprehensive_gene_table_with_gtex_expression.csv'
+    # result_df.to_csv(output_file, index=False)
     
     print("\n" + "=" * 80)
     print("GENERATION COMPLETE!")
